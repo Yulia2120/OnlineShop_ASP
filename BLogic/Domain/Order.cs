@@ -8,7 +8,6 @@ namespace BLogic.Domain
     {
        [Required]
        public int CustomerId { get; set; }
-       [Required]
        public DateTime DateTime { get; set; }
        [ForeignKey("CustomerId")]
        public virtual Customer Customer { get; set; }

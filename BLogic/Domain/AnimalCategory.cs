@@ -5,7 +5,7 @@ namespace BLogic.Domain
 {
     public class AnimalCategory:Identity
     {
-        [Required, StringLength(90)]
+        [StringLength(90)]
         public string AnimalName { get; set; }
         public virtual ICollection<ProductCategory> ProductCategories { get; set; }
 

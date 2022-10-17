@@ -6,7 +6,7 @@ namespace BLogic.Domain
 {
     public class Product : Identity
     {
-        [Required, StringLength(155)]
+        [StringLength(155)]
         public string ProductName { get; set; }
         public string ImgUrl { get; set; }
         public string ProductDescription { get; set; } 

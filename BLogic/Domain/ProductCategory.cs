@@ -6,7 +6,7 @@ namespace BLogic.Domain
 {
     public class ProductCategory:Identity
     {
-        [Required]
+        [StringLength(155)]
         public string CategoryName { get; set; }
         [Required]
         public int AnimalCategoryId { get; set; }
