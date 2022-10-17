@@ -2,7 +2,7 @@
 
 namespace BLogic.Interfaces
 {
-    public interface ICustomerRepositor: IRepository<Customer>
+    public interface ICustomerRepository: IRepository<Customer>
     {
         //для добавления методов с которыми будет работать только Customer
     }

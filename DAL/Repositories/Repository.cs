@@ -6,7 +6,7 @@ namespace DAL.Repositories
 {
     public class Repository<T> : IRepository<T> where T : Identity
     {
-        private Context _dbContext;
+        public Context _dbContext;
 
         public Repository(Context context)
         {
