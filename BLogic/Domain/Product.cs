@@ -1,18 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#pragma warning disable CS8618 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BLogic.Domain
 {
     public class Product : Identity
     {
-        public string ProductName { get; set; } = string.Empty;
-        public string ProductDescription { get; set; } = string.Empty;
+        [Required, StringLength(155)]
+        public string ProductName { get; set; }
+        public string ImgUrl { get; set; }
+        public string ProductDescription { get; set; } 
         public decimal Price { get; set; }
-        public Company Company { get; set; }
-        public ProductCategory ProductCategory  { get; set; }
+        [Required]
+        public int ProductCategoryId { get; set; }
+        [Required]
+        public int CompanyId { get; set; }
+        [ForeignKey("CompanyId")]
+        public virtual Company Company { get; set; }
+        [ForeignKey("ProductCategoryId")]
+        public virtual ProductCategory ProductCategory  { get; set; }
 
     }
 }

@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#pragma warning disable CS8618 
+using System.ComponentModel.DataAnnotations;
 
 namespace BLogic.Domain
 {
     public class Company :Identity
     {
-        public string CompanyName { get; set; }= string.Empty;
-        public string Contact { get; set; }= string.Empty;
-        public List<Product> Products { get; set; }
+        [Required]
+        public string CompanyName { get; set; }
+        [Required]
+        public string Contact { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
     }
 }
