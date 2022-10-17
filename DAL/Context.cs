@@ -6,15 +6,9 @@ namespace DAL
 {
     public class Context:DbContext
     {
-        //private string connectionString;
-
+      
         public Context(DbContextOptions<Context> options)
            : base(options){}
-
-        //public Context(string connectionString)
-        //{
-        //    this.connectionString = connectionString;
-        //}
 
         public DbSet<Company> Companies { get; set; }
         public DbSet<Customer> Customers { get; set; }
