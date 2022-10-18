@@ -1,5 +1,4 @@
 ﻿
-
 using BLogic.Domain;
 
 namespace DAL
@@ -8,7 +7,7 @@ namespace DAL
     {
         public static void SeedDatabase(Context context)
         {
-            context.Database.EnsureCreated();
+           // context.Database.EnsureCreated();
             if (context.Products.Count() == 0 && context.ProductCategories.Count() == 0 && context.AnimalCategories.Count() == 0 && context.Companies.Count() == 0)
             {
 
@@ -190,7 +189,7 @@ namespace DAL
                                  );
 
 
-                context.SaveChanges();
+               // context.SaveChanges();
 
 
               
