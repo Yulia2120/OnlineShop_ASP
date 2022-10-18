@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
-    public class Context:DbContext
+    public class Context : DbContext
     {
-      
+
         public Context(DbContextOptions<Context> options)
-           : base(options){}
+           : base(options) { }
 
         public DbSet<Company> Companies { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -16,5 +16,8 @@ namespace DAL
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
+
+       
     }
+      
 }

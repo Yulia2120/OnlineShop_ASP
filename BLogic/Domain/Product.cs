@@ -9,7 +9,9 @@ namespace BLogic.Domain
         [StringLength(155)]
         public string ProductName { get; set; }
         public string ImgUrl { get; set; }
-        public string ProductDescription { get; set; } 
+        public string ProductDescription { get; set; }
+
+        [Column(TypeName = "decimal(8, 2)")]
         public decimal Price { get; set; }
         [Required]
         public int ProductCategoryId { get; set; }
@@ -19,6 +21,7 @@ namespace BLogic.Domain
         public virtual Company Company { get; set; }
         [ForeignKey("ProductCategoryId")]
         public virtual ProductCategory ProductCategory  { get; set; }
+
 
     }
 }

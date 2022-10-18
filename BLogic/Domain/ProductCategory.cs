@@ -11,7 +11,7 @@ namespace BLogic.Domain
         [Required]
         public int AnimalCategoryId { get; set; }
         [ForeignKey("AnimalCategoryId")]
-        public AnimalCategory AnimalCategory { get; set; }
+        public virtual AnimalCategory AnimalCategory { get; set; }
         public virtual ICollection<Product> Products { get; set; }
         public ProductCategory()
         {
