@@ -1,5 +1,6 @@
 using BLogic.Interfaces;
 using DAL;
+using DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -28,6 +29,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<Context>();
-SeedData.SeedDatabase(context);
+
+
+
+//var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<Context>();
+//SeedData.SeedDatabase(context);
 app.Run();

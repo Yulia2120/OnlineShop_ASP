@@ -1,4 +1,4 @@
-﻿#pragma warning disable CS8618 
+﻿#pragma warning disable CS8618
 using System.ComponentModel.DataAnnotations;
 
 namespace BLogic.Domain
@@ -11,7 +11,7 @@ namespace BLogic.Domain
 
         public AnimalCategory()
         {
-            ProductCategories = new HashSet<ProductCategory>();
+              ProductCategories = new HashSet<ProductCategory>();
         }
     }
 }

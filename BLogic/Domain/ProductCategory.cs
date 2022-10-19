@@ -1,4 +1,4 @@
-﻿#pragma warning disable CS8618 
+﻿#pragma warning disable CS8618
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,9 +13,6 @@ namespace BLogic.Domain
         [ForeignKey("AnimalCategoryId")]
         public virtual AnimalCategory AnimalCategory { get; set; }
         public virtual ICollection<Product> Products { get; set; }
-        public ProductCategory()
-        {
-            Products = new HashSet<Product>();
-        }
+       
     }
 }

@@ -1,6 +1,5 @@
 ﻿using BLogic.Interfaces;
 using DAL.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
@@ -10,7 +9,6 @@ namespace DAL
         public UnitOfWork( Context context)
 
          { _db = context; }
-
 
         private CompanyRepository _companyRepository;
         public ICompanyRepository CompanyRepository
@@ -22,6 +20,7 @@ namespace DAL
 
                 return _companyRepository;
             }
+           
         }
         private AnimalCategoryRepository _animalCategoryRepository;
         public IAnimalCategoryRepository AnimalCategoryRepository
@@ -66,6 +65,7 @@ namespace DAL
 
                 return _productRepository;
             }
+           
         }
         private ProductCategoryRepository _productCategoryRepository;
         public IProductCategoryRepository ProductCategoryRepository

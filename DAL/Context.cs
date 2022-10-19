@@ -1,4 +1,4 @@
-﻿#pragma warning disable CS8618
+﻿
 using BLogic.Domain;
 using Microsoft.EntityFrameworkCore;
 

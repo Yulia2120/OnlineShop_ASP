@@ -1,4 +1,4 @@
-﻿#pragma warning disable CS8603
+﻿
 using BLogic.Domain;
 using BLogic.Interfaces;
 
@@ -17,9 +17,9 @@ namespace DAL.Repositories
             return _dbContext.Set<T>().FirstOrDefault(x => x.Id == id);
         }
 
-        public List<T> GetAll()
+        public IAsyncEnumerable<T> GetAll()
         {
-            return _dbContext.Set<T>().ToList();
+            return _dbContext.Set<T>().AsAsyncEnumerable();
         }
 
         public void Save(T item)
