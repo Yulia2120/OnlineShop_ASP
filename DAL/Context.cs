@@ -8,7 +8,9 @@ namespace DAL
     {
 
         public Context(DbContextOptions<Context> options)
-           : base(options) { }
+           : base(options)
+        {
+        }
 
         public DbSet<Company> Companies { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -17,7 +19,8 @@ namespace DAL
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
 
-       
-    }
       
+
+    }
+
 }

@@ -1,12 +1,12 @@
-﻿
-using BLogic.Domain;
+﻿using BLogic.Domain;
 
 namespace DAL
 {
     public class SeedData
-    {
+    { 
         public static void SeedDatabase(Context context)
-        {
+        { 
+           
             context.Database.EnsureCreated();
             if (context.Products.Count() == 0 && context.ProductCategories.Count() == 0 && context.AnimalCategories.Count() == 0 && context.Companies.Count() == 0)
             {
@@ -50,8 +50,8 @@ namespace DAL
                                        ImgUrl = "https://i.ibb.co/k6SCXfM/3.webp",
                                        Price = 352.00M,
                                        ProductDescription = "Здорова шкіра і блискуча шерсть.Лососева олія - натуральне джерело Омега - 3 жирних кислот, сприяє блиску і здоров’ю шерсті.",
-                                       ProductCategory = Dogfood,
-                                       Company = company2
+                                     ProductCategory = Dogfood,
+                                     Company = company2
                                  },
                                  new Product
                                    {
@@ -59,8 +59,8 @@ namespace DAL
                                        ImgUrl = "https://i.ibb.co/Nngnsnw/4.webp",
                                        Price = 1412.80M,
                                        ProductDescription = "Повноцінний корм з куркою для цуценят і молодих собак (1-24 місяців) великих порід (25-45 кг). З високим вмістом курки.",
-                                       ProductCategory = Dogfood,
-                                       Company = company2
+                                     ProductCategory = Dogfood,
+                                     Company = company2
 
                                  },
                                  new Product
@@ -69,7 +69,7 @@ namespace DAL
                                      ImgUrl = "https://i.ibb.co/M2dppn2/1.webp",
                                      Price = 503.20M,
                                      ProductDescription = "Гіпоалергенна рецептура зі свіжою куркою й індичкою для кошенят (1–12 місяців), а також вагітних або годуючих котів.",
-                                     ProductCategory= Catfood,
+                                     ProductCategory = Catfood,
                                      Company = company2
 
                                  },

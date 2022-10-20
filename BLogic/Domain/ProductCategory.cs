@@ -8,11 +8,12 @@ namespace BLogic.Domain
     {
         [StringLength(155)]
         public string CategoryName { get; set; }
-        [Required]
+
         public int AnimalCategoryId { get; set; }
         [ForeignKey("AnimalCategoryId")]
         public virtual AnimalCategory AnimalCategory { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
-       
+    
+
+
     }
 }

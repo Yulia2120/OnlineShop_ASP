@@ -15,7 +15,7 @@ namespace OnlineShop_ASP.Controllers
             _ofWork = ofWork;
            
         }
-       
+
         [HttpGet]
         public IAsyncEnumerable<Product> GetAllProducts()
         {
@@ -27,6 +27,7 @@ namespace OnlineShop_ASP.Controllers
             _ofWork.ProductRepository.Save(product);
             _ofWork.Commit();
             return Ok(product);
+            //при вставке добавлять все id, кроме первого(id product)
 
         }
     }

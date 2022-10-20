@@ -6,5 +6,6 @@ namespace BLogic.Interfaces
     {
         //для добавления методов с которыми будет работать только Product
         public Product FindProductName(string title);
+       // public IEnumerable<Product> GetProduct();
     }
 }

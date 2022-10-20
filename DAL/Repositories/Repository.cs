@@ -25,6 +25,7 @@ namespace DAL.Repositories
         public void Save(T item)
         {
             _dbContext.Set<T>().Add(item);
+         
         }
     }
 }

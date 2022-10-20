@@ -6,12 +6,12 @@ namespace BLogic.Domain
 {
     public class Order:Identity
     {
-       [Required]
-       public int CustomerId { get; set; }
-       public DateTime DateTime { get; set; }
-       [ForeignKey("CustomerId")]
-       public virtual Customer Customer { get; set; }
-       public virtual ICollection<Product> Products { get; set; }
+
+        public int CustomerId { get; set; }
+        public DateTime DateTime { get; set; }
+        [ForeignKey("CustomerId")]
+        public virtual Customer Customer { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
     }
 }

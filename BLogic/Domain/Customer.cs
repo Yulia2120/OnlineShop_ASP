@@ -7,9 +7,9 @@ namespace BLogic.Domain
     {
       [Required, StringLength(90)]
       public string UserName { get; set; }
-      [Required]
+      [Required, StringLength(90)]
       public string Email { get; set; }
-      [Required]
+      [Required, StringLength(50)]
       public string Password { get; set; }
       public virtual ICollection<Order> Orders { get; set; }
 
