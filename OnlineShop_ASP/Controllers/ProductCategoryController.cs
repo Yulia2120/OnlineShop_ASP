@@ -20,6 +20,15 @@ namespace OnlineShop_ASP.Controllers
         {
             return _ofWork.ProductCategoryRepository.GetAll();
         }
+        [HttpPost]
+        public async Task<ActionResult> Post(ProductCategory category)
+        {
+            _ofWork.ProductCategoryRepository.Save(category);
+            _ofWork.Commit();
+            return Ok(category);
+           
+
+        }
 
     }
 }
